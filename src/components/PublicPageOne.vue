@@ -5,8 +5,8 @@
     <button class="button" @click="getSecretData">
       try to get some secret data
     </button>
-    <pre v-if="user">{{ user }}</pre>
-    <div v-if="authError" class="error">Unauthorized</div>
+    <pre v-if="user" data-spec="secret-data">{{ user }}</pre>
+    <div v-if="authError" class="error" data-spec="error">Unauthorized</div>
   </div>
 </template>
 

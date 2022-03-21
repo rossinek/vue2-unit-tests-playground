@@ -1,4 +1,3 @@
-import router from "@/router";
 import store from "@/store";
 import axios from "axios";
 
@@ -12,7 +11,6 @@ defaultClient.interceptors.response.use(
   async (error) => {
     if (error.response.status === 401) {
       await store.dispatch("logout");
-      router.push({ name: "AuthLogin" });
     }
     return Promise.reject(error);
   }
