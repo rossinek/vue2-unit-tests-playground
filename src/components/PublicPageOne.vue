@@ -6,6 +6,7 @@
       try to get some secret data
     </button>
     <pre v-if="user">{{ user }}</pre>
+    <div v-if="authError" class="error">Unauthorized</div>
   </div>
 </template>
 
@@ -16,12 +17,18 @@ export default {
   data() {
     return {
       user: null,
+      authError: false,
     };
   },
   methods: {
     async getSecretData() {
-      const response = await getUser();
-      this.user = response.data;
+      try {
+        const response = await getUser();
+        this.user = response.data;
+        this.authError = false;
+      } catch {
+        this.authError = true;
+      }
     },
   },
 };
@@ -35,5 +42,13 @@ pre {
   border-radius: 8px;
   background-color: #eee;
   padding: 20px;
+}
+.error {
+  margin: 30px auto;
+  max-width: 340px;
+  border-radius: 8px;
+  background-color: #eee;
+  padding: 20px;
+  color: red;
 }
 </style>

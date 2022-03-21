@@ -11,32 +11,32 @@ const routes = [
   {
     path: "/login",
     name: "AuthLogin",
-    component: () => import("@/views/AuthLogin.vue"),
+    component: () => import("@/components/AuthLogin.vue"),
   },
   {
     path: "/register",
     name: "AuthRegister",
-    component: () => import("@/views/AuthRegister.vue"),
+    component: () => import("@/components/AuthRegister.vue"),
   },
   {
     path: "/public-page-one",
     name: "PublicPageOne",
-    component: () => import("@/views/PublicPageOne.vue"),
+    component: () => import("@/components/PublicPageOne.vue"),
   },
   {
     path: "/public-page-two",
     name: "PublicPageTwo",
-    component: () => import("@/views/PublicPageTwo.vue"),
+    component: () => import("@/components/PublicPageTwo.vue"),
   },
   {
     path: "/private-page-one",
     name: "PrivatePageOne",
-    component: () => import("@/views/PrivatePageOne.vue"),
+    component: () => import("@/components/PrivatePageOne.vue"),
   },
   {
     path: "/private-page-two",
     name: "PrivatePageTwo",
-    component: () => import("@/views/PrivatePageTwo.vue"),
+    component: () => import("@/components/PrivatePageTwo.vue"),
   },
 ];
 
