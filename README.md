@@ -1,4 +1,4 @@
-# vue2-auth-playground
+# vue2-unit-test-playground
 
 ## Project setup
 ```
