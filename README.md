@@ -5,19 +5,9 @@
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Run unit tests
 ```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
+yarn test:unit
 ```
 
 ### Customize configuration
